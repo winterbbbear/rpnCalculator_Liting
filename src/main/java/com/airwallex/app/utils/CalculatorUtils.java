@@ -24,7 +24,7 @@ public class CalculatorUtils {
     }
 
     public static String printEmptyStackErrorMessage(String operator, int counter) {
-        String stringBuilder = "Operator: " + operator +
+        String stringBuilder = "operator: " + operator +
                 " (position: " +
                 counter +
                 "): insufficient parameters";
