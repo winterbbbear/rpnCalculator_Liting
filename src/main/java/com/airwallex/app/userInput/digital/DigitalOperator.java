@@ -18,10 +18,10 @@ public class DigitalOperator implements AbstractOperator {
     }
 
     @Override
-    public void calculate(Calculate storage) {
-        storage.pushDigital(digits);
+    public void calculate(Calculate calculate) {
+        calculate.pushDigital(digits);
         OperationRecord record = getOperationRecordFromInputDigits(digits);
-        storage.setOperationRecord(record);
+        calculate.setOperationRecord(record);
     }
     @Override
     public String getOperatorName() {

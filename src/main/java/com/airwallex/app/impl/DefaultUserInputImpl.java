@@ -64,7 +64,7 @@ public class DefaultUserInputImpl implements UserInput {
 		return Optional.empty();
 	}
 
-	protected AbstractOperator getDigitalUserInput(String userEntered) {
+	public AbstractOperator getDigitalUserInput(String userEntered) {
 		if(userEntered == null){
 			return null;
 		}
