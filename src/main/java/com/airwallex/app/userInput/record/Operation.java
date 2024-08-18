@@ -1,7 +1,6 @@
 package com.airwallex.app.userInput.record;
 
 
-import com.airwallex.app.error.ErrorCode;
 import com.airwallex.app.error.OperatorErrorCode;
 import com.airwallex.app.userInput.operator.AbstractOperator;
 import org.apache.commons.collections4.CollectionUtils;
@@ -9,7 +8,7 @@ import org.apache.commons.collections4.CollectionUtils;
 import java.math.BigDecimal;
 import java.util.List;
 
-public class OperationRecord {
+public class Operation {
 
     private List<BigDecimal> parameters;
 
@@ -23,7 +22,7 @@ public class OperationRecord {
         return operator;
     }
 
-    public OperationRecord(List<BigDecimal> parameters, AbstractOperator operator) {
+    public Operation(List<BigDecimal> parameters, AbstractOperator operator) {
         if (CollectionUtils.isEmpty(parameters)) {
             System.err.println(OperatorErrorCode.ILLEGAL_ARGUMENT.getDescription());
         }

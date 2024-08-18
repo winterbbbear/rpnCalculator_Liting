@@ -1,7 +1,7 @@
 package com.airwallex.app.userInput.operator;
 
 import com.airwallex.app.api.Calculate;
-import com.airwallex.app.userInput.record.OperationRecord;
+import com.airwallex.app.userInput.record.Operation;
 import com.airwallex.app.userInput.enums.OperatorsEnum;
 
 import java.math.BigDecimal;
@@ -20,7 +20,7 @@ public class SquareRootOperator extends Operator{
             BigDecimal result = BigDecimal.valueOf(Math.sqrt(first.doubleValue())).setScale(DECIMAL_PLACES, RoundingMode.DOWN);
             calculate.pushDigital(result);
             List<BigDecimal> params = Arrays.asList(first);
-            OperationRecord record = new OperationRecord(params, this);;
+            Operation record = new Operation(params, this);;
             calculate.setOperationRecord(record);
         }
         else {

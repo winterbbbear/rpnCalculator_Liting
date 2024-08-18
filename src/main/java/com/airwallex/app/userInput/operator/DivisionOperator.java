@@ -3,7 +3,7 @@ package com.airwallex.app.userInput.operator;
 import com.airwallex.app.api.Calculate;
 import com.airwallex.app.error.OperatorErrorCode;
 import com.airwallex.app.userInput.enums.OperatorsEnum;
-import com.airwallex.app.userInput.record.OperationRecord;
+import com.airwallex.app.userInput.record.Operation;
 
 import java.math.BigDecimal;
 import java.math.RoundingMode;
@@ -28,7 +28,7 @@ public class DivisionOperator extends Operator{
         BigDecimal second = calculate.popDigital();
         BigDecimal total = second.divide(first, DECIMAL_PLACES, RoundingMode.DOWN);
         calculate.pushDigital(total);
-        OperationRecord record = this.getOperationRecord(first, second);
+        Operation record = this.getOperationRecord(first, second);
         calculate.setOperationRecord(record);
     }
 }

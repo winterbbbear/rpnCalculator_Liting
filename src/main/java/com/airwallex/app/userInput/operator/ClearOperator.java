@@ -1,7 +1,7 @@
 package com.airwallex.app.userInput.operator;
 
 import com.airwallex.app.api.Calculate;
-import com.airwallex.app.userInput.record.OperationRecord;
+import com.airwallex.app.userInput.record.Operation;
 import com.airwallex.app.userInput.enums.OperatorsEnum;
 import org.apache.commons.collections4.CollectionUtils;
 
@@ -27,17 +27,17 @@ public class ClearOperator implements AbstractOperator {
             elements.add(digit);
         }
         if (CollectionUtils.isNotEmpty(elements)) {
-            Optional<OperationRecord> record = this.getOperationRecordByList(elements);
+            Optional<Operation> record = this.getOperationRecordByList(elements);
             if(record.isPresent()) {
                 calculate.setOperationRecord(record.get());
             }
         }
     }
 
-    private Optional<OperationRecord> getOperationRecordByList(List<BigDecimal> elements) {
+    private Optional<Operation> getOperationRecordByList(List<BigDecimal> elements) {
         if (CollectionUtils.isNotEmpty(elements)) {
             Collections.reverse(elements);
-            return Optional.of(new OperationRecord(elements, this));
+            return Optional.of(new Operation(elements, this));
         }
         return Optional.empty();
     }

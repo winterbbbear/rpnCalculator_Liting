@@ -1,7 +1,7 @@
 package com.airwallex.app.userInput.operator;
 
 import com.airwallex.app.api.Calculate;
-import com.airwallex.app.userInput.record.OperationRecord;
+import com.airwallex.app.userInput.record.Operation;
 import com.airwallex.app.userInput.enums.OperatorsEnum;
 
 import java.math.BigDecimal;
@@ -10,7 +10,7 @@ public class UndoOperator implements AbstractOperator {
     @Override
     public void calculate(Calculate calculate) {
         //get history from OperationRecord
-        OperationRecord record = calculate.getOperationRecord();
+        Operation record = calculate.getOperationRecord();
         AbstractOperator operator = record.getOperator();
         if (!((null != operator) && ((operator instanceof ClearOperator)))) {
             calculate.popDigital();

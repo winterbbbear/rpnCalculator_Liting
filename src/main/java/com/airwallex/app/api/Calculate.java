@@ -1,6 +1,6 @@
 package com.airwallex.app.api;
 
-import com.airwallex.app.userInput.record.OperationRecord;
+import com.airwallex.app.userInput.record.Operation;
 
 import java.math.BigDecimal;
 import java.util.Stack;
@@ -18,9 +18,9 @@ public interface Calculate {
 
     BigDecimal popDigital();
 
-    void setOperationRecord(OperationRecord record);
+    void setOperationRecord(Operation record);
 
-    OperationRecord getOperationRecord();
+    Operation getOperationRecord();
 
     int getDigitsStackSize();
 }

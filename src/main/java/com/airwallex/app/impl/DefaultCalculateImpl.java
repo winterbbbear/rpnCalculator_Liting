@@ -1,7 +1,7 @@
 package com.airwallex.app.impl;
 
 import com.airwallex.app.api.Calculate;
-import com.airwallex.app.userInput.record.OperationRecord;
+import com.airwallex.app.userInput.record.Operation;
 
 import java.math.BigDecimal;
 import java.util.Stack;
@@ -10,7 +10,7 @@ public class DefaultCalculateImpl implements Calculate {
 
     private Stack<BigDecimal> digitStack = new Stack<>();
 
-    private Stack<OperationRecord> operationRecordStack = new Stack<>();
+    private Stack<Operation> operationStack = new Stack<>();
 
 
     @Override
@@ -29,13 +29,13 @@ public class DefaultCalculateImpl implements Calculate {
     }
 
     @Override
-    public void setOperationRecord(OperationRecord record) {
-        this.operationRecordStack.push(record);
+    public void setOperationRecord(Operation record) {
+        this.operationStack.push(record);
     }
 
     @Override
-    public OperationRecord getOperationRecord() {
-        return this.operationRecordStack.pop();
+    public Operation getOperationRecord() {
+        return this.operationStack.pop();
     }
 
     @Override

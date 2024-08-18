@@ -1,7 +1,7 @@
 package com.airwallex.app.userInput.digital;
 
 import com.airwallex.app.api.Calculate;
-import com.airwallex.app.userInput.record.OperationRecord;
+import com.airwallex.app.userInput.record.Operation;
 import com.airwallex.app.userInput.operator.AbstractOperator;
 
 
@@ -20,15 +20,15 @@ public class DigitalOperator implements AbstractOperator {
     @Override
     public void calculate(Calculate calculate) {
         calculate.pushDigital(digits);
-        OperationRecord record = getOperationRecordFromInputDigits(digits);
+        Operation record = getOperationRecordFromInputDigits(digits);
         calculate.setOperationRecord(record);
     }
     @Override
     public String getOperatorName() {
         return null;
     }
-    private OperationRecord getOperationRecordFromInputDigits(BigDecimal digit){
+    private Operation getOperationRecordFromInputDigits(BigDecimal digit){
         List<BigDecimal> params = Arrays.asList(digit);
-        return new OperationRecord(params, null);
+        return new Operation(params, null);
     }
 }
