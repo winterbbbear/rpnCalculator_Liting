@@ -13,7 +13,7 @@ public class DigitalOperator implements AbstractOperator {
 
     private BigDecimal digits;
 
-    public DigitalOperator(final String userEntered) {
+    public DigitalOperator(String userEntered) {
         this.digits = new BigDecimal(userEntered);
     }
 

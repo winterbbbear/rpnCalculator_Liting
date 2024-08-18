@@ -1,5 +1,6 @@
 package com.airwallex.app.impl;
 
+import com.airwallex.app.userInput.digital.DigitalOperator;
 import com.airwallex.app.userInput.operator.AbstractOperator;
 import org.junit.Assert;
 import org.junit.Before;
@@ -38,5 +39,12 @@ public class DefaultUserInputImplTest {
     public void testGetDigitalUserEntryWithNullInput() {
         AbstractOperator abstractOperator = defaultUserInput.getDigitalUserInput(null);
         Assert.assertNull(abstractOperator);
+    }
+
+    @Test
+    public void testGetDigitalUserEntryWithDigitalInput() {
+        AbstractOperator abstractOperator = defaultUserInput.getDigitalUserInput("5");
+        Assert.assertNotNull(abstractOperator);
+        Assert.assertTrue(abstractOperator instanceof DigitalOperator);
     }
 }
