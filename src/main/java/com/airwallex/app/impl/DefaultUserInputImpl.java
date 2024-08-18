@@ -1,9 +1,9 @@
 package com.airwallex.app.impl;
 
 import com.airwallex.app.api.UserInput;
-import com.airwallex.app.userEnter.operator.AbstractOperator;
-import com.airwallex.app.userEnter.digital.DigitalOperator;
-import com.airwallex.app.userEnter.factory.OperatorFactory;
+import com.airwallex.app.userInput.operator.AbstractOperator;
+import com.airwallex.app.userInput.digital.DigitalOperator;
+import com.airwallex.app.userInput.factory.OperatorFactory;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.InputStream;
@@ -15,10 +15,6 @@ public class DefaultUserInputImpl implements UserInput {
 	private static final String REGEX_DIGIT_PATTERN = "^-*\\d+$";
 
 	private Scanner scanner;
-
-	public DefaultUserInputImpl() {
-		this(System.in);
-	}
 
 	public DefaultUserInputImpl(InputStream in) {
 		this.scanner = new Scanner(in);
@@ -32,7 +28,7 @@ public class DefaultUserInputImpl implements UserInput {
 
 			String[] strings = userEntered.split(" ");
 			for (String string : strings) {
-				Optional<AbstractOperator> userEnter = this.constructUserEntry(string);
+				Optional<AbstractOperator> userEnter = this.constructUserInput(string);
 				if (userEnter.isPresent()) {
 					userEntries.add(userEnter.get());
 				}
@@ -41,22 +37,21 @@ public class DefaultUserInputImpl implements UserInput {
 		return userEntries;
 	}
 
-	public Optional<AbstractOperator> constructUserEntry(String userEntered) {
+	public Optional<AbstractOperator> constructUserInput(String userEntered) {
 		Optional<AbstractOperator> userEntry = Optional.empty();
 		
 		if (StringUtils.isNotBlank(userEntered)) {
-			//if (StringUtils.isNumeric(userEntered)) {
 			if (userEntered.matches(REGEX_DIGIT_PATTERN)) {
-				userEntry = Optional.of(getDigitalUserEntry(userEntered));
+				userEntry = Optional.of(getDigitalUserInput(userEntered));
 			}
 			else {
-				userEntry = getOperatorUserEntry(userEntered);
+				userEntry = getOperatorUserInput(userEntered);
 			}
 		}
 		return userEntry;
 	}
 
-	protected Optional<AbstractOperator> getOperatorUserEntry (String userEntered) {
+	public Optional<AbstractOperator> getOperatorUserInput(String userEntered) {
 		if(userEntered == null){
 			return Optional.empty();
 		}
@@ -69,7 +64,7 @@ public class DefaultUserInputImpl implements UserInput {
 		return Optional.empty();
 	}
 
-	protected AbstractOperator getDigitalUserEntry(String userEntered) {
+	protected AbstractOperator getDigitalUserInput(String userEntered) {
 		if(userEntered == null){
 			return null;
 		}

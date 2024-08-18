@@ -20,7 +20,6 @@ public class CalculatorUtils {
             System.out.print((ZERO == e.scale()) ? e : format10Digits(e.stripTrailingZeros()));
             System.out.print(SPACE);
         });
-
         System.out.println();
     }
 

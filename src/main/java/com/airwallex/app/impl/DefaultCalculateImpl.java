@@ -1,7 +1,7 @@
 package com.airwallex.app.impl;
 
 import com.airwallex.app.api.Calculate;
-import com.airwallex.app.record.OperationRecord;
+import com.airwallex.app.userInput.record.OperationRecord;
 
 import java.math.BigDecimal;
 import java.util.Stack;
@@ -17,7 +17,6 @@ public class DefaultCalculateImpl implements Calculate {
     public Stack<BigDecimal> getDigitStack(){
         return this.digitStack;
     }
-
 
     @Override
     public void pushDigital(BigDecimal userEntry) {

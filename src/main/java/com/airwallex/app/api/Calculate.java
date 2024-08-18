@@ -1,6 +1,6 @@
 package com.airwallex.app.api;
 
-import com.airwallex.app.record.OperationRecord;
+import com.airwallex.app.userInput.record.OperationRecord;
 
 import java.math.BigDecimal;
 import java.util.Stack;
