@@ -1,5 +1,6 @@
 package com.airwallex.app;
 
+import com.airwallex.calculator.RpnCalculator;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

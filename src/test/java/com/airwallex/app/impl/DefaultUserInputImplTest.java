@@ -1,7 +1,8 @@
 package com.airwallex.app.impl;
 
-import com.airwallex.app.userInput.digital.DigitalOperator;
-import com.airwallex.app.userInput.operator.AbstractOperator;
+import com.airwallex.calculator.impl.DefaultUserInputImpl;
+import com.airwallex.calculator.operate.digital.DigitalOperator;
+import com.airwallex.calculator.operate.AbstractOperator;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
