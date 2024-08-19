@@ -1,5 +1,6 @@
 package com.airwallex.calculator.operate.factory;
 
+import com.airwallex.calculator.error.OperatorErrorCode;
 import com.airwallex.calculator.impl.DefaultCalculateImpl;
 import com.airwallex.calculator.impl.DefaultUserInputImpl;
 
@@ -9,7 +10,7 @@ public class CalculateInputFactory {
 
     public static DefaultUserInputImpl getUserInputFromCommandLine(InputStream input){
         if (null == input) {
-            System.err.println("InputStream is null");
+            System.err.println(OperatorErrorCode.ILLEGAL_ARGUMENT.getCode());
         }
         return new DefaultUserInputImpl(input);
     }

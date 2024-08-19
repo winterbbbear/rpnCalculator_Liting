@@ -31,7 +31,7 @@ public class SquareRootOperator extends Operator{
 
     @Override
     public String getOperatorName() {
-        return OperatorsEnum.SQUAREROOT.getCode();
+        return OperatorsEnum.SQUARE_ROOT.getCode();
     }
 
     @Override

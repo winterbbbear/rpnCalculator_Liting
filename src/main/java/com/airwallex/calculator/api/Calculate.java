@@ -12,17 +12,17 @@ import java.util.Stack;
 public interface Calculate {
 
     /**
-     * get digital from operation stack
+     * get digits from operation stack
      */
     Stack<BigDecimal> getDigitStack();
 
     /**
-     * push digital and store the digital into operation record
+     * push digits and store the digits into operation record
      */
     void pushDigital(BigDecimal userInput);
 
     /**
-     * pop digital from stack
+     * pop digits from stack
      */
     BigDecimal popDigital();
 

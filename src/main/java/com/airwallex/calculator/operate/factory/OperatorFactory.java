@@ -16,7 +16,7 @@ public class OperatorFactory {
 		Optional<AbstractOperator> userEntry = Optional.empty();
 		
 		try {
-			OperatorsEnum operator = OperatorsEnum.fromString(userEntered);
+			OperatorsEnum operator = OperatorsEnum.checkIsValidOperator(userEntered);
 			switch (operator) {
 				case ADDITION:
 					userEntry = Optional.of(new AdditionOperator());
@@ -30,7 +30,7 @@ public class OperatorFactory {
 				case DIVISION:
 					userEntry = Optional.of(new DivisionOperator());
 					break;
-				case SQUAREROOT:
+				case SQUARE_ROOT:
 					userEntry = Optional.of(new SquareRootOperator());
 					break;
 				case CLEAR:

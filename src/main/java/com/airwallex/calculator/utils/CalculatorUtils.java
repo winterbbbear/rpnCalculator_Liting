@@ -34,7 +34,7 @@ public class CalculatorUtils {
 
     private static String format10Digits(BigDecimal digit) {
         if (TEN <= digit.scale()) {
-            // 仅用作展示，10位精度
+            // 10 scale and rounding down
             return digit.setScale(10, RoundingMode.DOWN).toString();
         } else {
             return digit.toString();

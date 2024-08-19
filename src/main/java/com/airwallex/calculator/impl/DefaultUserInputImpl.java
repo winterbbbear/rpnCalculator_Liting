@@ -25,13 +25,10 @@ public class DefaultUserInputImpl implements UserInput {
 		List<AbstractOperator> userEntries = new ArrayList<>();
 		String userEntered = scanner.nextLine();
 		if (StringUtils.isNotEmpty(userEntered)) {
-
 			String[] strings = userEntered.split(" ");
 			for (String string : strings) {
 				Optional<AbstractOperator> userEnter = this.constructUserInput(string);
-				if (userEnter.isPresent()) {
-					userEntries.add(userEnter.get());
-				}
+				userEnter.ifPresent(userEntries::add);
 			}
 		}
 		return userEntries;
