@@ -6,6 +6,12 @@ import com.airwallex.calculator.operate.record.Operation;
 import java.math.BigDecimal;
 import java.util.Stack;
 
+/**
+ * implementation
+ *
+ * @author litingsheng
+ * @date 2024/08/20
+ */
 public class DefaultCalculateImpl implements Calculate {
 
     private Stack<BigDecimal> digitStack = new Stack<>();

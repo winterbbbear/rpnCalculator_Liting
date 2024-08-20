@@ -4,6 +4,12 @@ import com.airwallex.calculator.operate.AbstractOperator;
 
 import java.util.List;
 
+/**
+ * interface: UserInput from command-line
+ *
+ * @author litingsheng
+ * @date 2024/08/18
+ */
 public interface UserInput {
 
     /**

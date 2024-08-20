@@ -11,14 +11,16 @@ public class UndoOperator implements AbstractOperator {
 
     @Override
     public void calculate(Calculate calculate) {
-        //get history from OperationRecord
         Operation record = calculate.getOperationRecord();
         AbstractOperator operator = record.getOperator();
-        if (!((null != operator) && ((operator instanceof ClearOperator)))) {
+        if (null == operator) {
+            return;
+        }
+        if (!(operator instanceof ClearOperator)) {
             calculate.popDigital();
         }
         if (null != record.getOperator()) {
-            for(BigDecimal digit : record.getParameters()) {
+            for (BigDecimal digit : record.getParameters()) {
                 calculate.pushDigital(digit);
             }
         }

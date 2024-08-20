@@ -8,7 +8,13 @@ import com.airwallex.calculator.operate.record.Operation;
 import java.math.BigDecimal;
 import java.math.RoundingMode;
 
-public class DivisionOperator extends Operator{
+/**
+ * Division Operator
+ *
+ * @author litingsheng
+ * @date 2024/08/20
+ */
+public class DivisionOperator extends Operator {
 
     public static final int DECIMAL_PLACES = 15;
 

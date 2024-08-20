@@ -1,6 +1,12 @@
 package com.airwallex.calculator.error;
 
 
+/**
+ * ErrorCode Object
+ *
+ * @author litingsheng
+ * @date 2024/08/20
+ */
 public class ErrorCode {
 
     /**

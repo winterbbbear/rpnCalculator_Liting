@@ -2,7 +2,8 @@ package com.airwallex.calculator;
 
 import com.airwallex.calculator.api.Calculate;
 import com.airwallex.calculator.api.UserInput;
-import com.airwallex.calculator.operate.factory.CalculateInputFactory;
+import com.airwallex.calculator.operate.factory.CalculatorFactory;
+import com.airwallex.calculator.operate.factory.UserInputFactory;
 import com.airwallex.calculator.operate.AbstractOperator;
 import com.airwallex.calculator.utils.CalculatorUtils;
 
@@ -17,8 +18,8 @@ public class RpnCalculator {
 
     public RpnCalculator() {
         //construct SystemInput
-        this.userInput = CalculateInputFactory.getUserInputFromCommandLine(System.in);
-        this.calculate = CalculateInputFactory.getDefaultCalculateFromCommandLine();
+        this.userInput = UserInputFactory.getUserInputFromCommandLine(System.in);
+        this.calculate = CalculatorFactory.getDefaultCalculator();
     }
 
 

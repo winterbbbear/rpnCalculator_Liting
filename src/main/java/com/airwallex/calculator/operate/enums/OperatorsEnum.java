@@ -2,8 +2,6 @@ package com.airwallex.calculator.operate.enums;
 
 import com.airwallex.calculator.error.OperatorErrorCode;
 
-import java.util.Arrays;
-import java.util.List;
 
 public enum OperatorsEnum {
 
