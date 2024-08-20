@@ -7,6 +7,12 @@ import com.airwallex.calculator.operate.enums.OperatorsEnum;
 
 import java.math.BigDecimal;
 
+/**
+ * Undo function operator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public class UndoOperator implements AbstractOperator {
 
     @Override

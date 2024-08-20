@@ -10,6 +10,12 @@ import com.airwallex.calculator.utils.CalculatorUtils;
 import java.util.EmptyStackException;
 import java.util.List;
 
+/**
+ * Main class of RpnCalculator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public class RpnCalculator {
 
     private UserInput userInput;
@@ -17,7 +23,7 @@ public class RpnCalculator {
     private Calculate calculate;
 
     public RpnCalculator() {
-        //construct SystemInput
+        //0.construct SystemInput
         this.userInput = UserInputFactory.getUserInputFromCommandLine(System.in);
         this.calculate = CalculatorFactory.getDefaultCalculator();
     }
@@ -39,7 +45,6 @@ public class RpnCalculator {
             CalculatorUtils.printStack(this.calculate.getDigitStack());
         }
     }
-
 
     public static void main(String[] argv) {
         RpnCalculator rpnCalculator = new RpnCalculator();

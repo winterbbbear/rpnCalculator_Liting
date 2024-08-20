@@ -6,6 +6,12 @@ import com.airwallex.calculator.operate.enums.OperatorsEnum;
 
 import java.math.BigDecimal;
 
+/**
+ * Subtraction Operator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public class SubtractionOperator extends Operator {
 
     @Override

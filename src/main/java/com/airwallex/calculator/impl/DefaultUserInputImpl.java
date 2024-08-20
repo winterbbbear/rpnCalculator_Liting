@@ -10,6 +10,12 @@ import java.io.InputStream;
 import java.util.*;
 
 
+/**
+ * implementation of UserInput api
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public class DefaultUserInputImpl implements UserInput {
 
 	private static final String REGEX_DIGIT_PATTERN = "^-*\\d+$";

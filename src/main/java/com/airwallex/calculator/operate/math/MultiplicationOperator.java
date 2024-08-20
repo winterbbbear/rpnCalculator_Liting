@@ -6,8 +6,13 @@ import com.airwallex.calculator.operate.enums.OperatorsEnum;
 
 import java.math.BigDecimal;
 
+/**
+ * Multiplication Operator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public class MultiplicationOperator extends Operator{
-
 
     @Override
     public String getOperatorName() {

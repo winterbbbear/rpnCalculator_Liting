@@ -9,6 +9,12 @@ import java.math.RoundingMode;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * SquareRoot Operator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public class SquareRootOperator extends Operator{
 
     public static final int DECIMAL_PLACES = 15;

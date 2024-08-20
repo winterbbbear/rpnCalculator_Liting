@@ -2,6 +2,7 @@ package com.airwallex.calculator.operate.factory;
 
 
 
+import com.airwallex.calculator.error.OperatorErrorCode;
 import com.airwallex.calculator.operate.AbstractOperator;
 import com.airwallex.calculator.operate.function.ClearOperator;
 import com.airwallex.calculator.operate.function.UndoOperator;
@@ -10,6 +11,10 @@ import com.airwallex.calculator.operate.enums.OperatorsEnum;
 
 import java.util.Optional;
 
+/**
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public class OperatorFactory {
 
 	public static Optional<AbstractOperator> getOperator(final String userEntered) {
@@ -17,6 +22,10 @@ public class OperatorFactory {
 		
 		try {
 			OperatorsEnum operator = OperatorsEnum.checkIsValidOperator(userEntered);
+			if (operator == null) {
+				System.err.println(OperatorErrorCode.ILLEGAL_ARGUMENT.getDescription());
+				return userEntry;
+			}
 			switch (operator) {
 				case ADDITION:
 					userEntry = Optional.of(new AdditionOperator());
@@ -42,7 +51,6 @@ public class OperatorFactory {
 		} catch (IllegalArgumentException e) {
 			e.printStackTrace();
 		}
-		
 		return userEntry;
 	}
 }

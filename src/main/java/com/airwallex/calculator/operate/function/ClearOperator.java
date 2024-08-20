@@ -12,6 +12,12 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * Clear function operator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public class ClearOperator implements AbstractOperator {
 
     @Override

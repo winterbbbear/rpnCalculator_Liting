@@ -6,6 +6,12 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+/**
+ * CalculatorUtils to process the format of output information
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public class CalculatorUtils {
 
     private static final String SPACE = " ";

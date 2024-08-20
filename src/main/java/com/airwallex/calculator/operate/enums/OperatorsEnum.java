@@ -3,6 +3,10 @@ package com.airwallex.calculator.operate.enums;
 import com.airwallex.calculator.error.OperatorErrorCode;
 
 
+/**
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public enum OperatorsEnum {
 
 	/**
@@ -57,7 +61,6 @@ public enum OperatorsEnum {
 				return operator;
 			}
 		}
-		System.err.println(OperatorErrorCode.ILLEGAL_ARGUMENT.getCode());
 		return null;
 	}
 }

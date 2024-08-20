@@ -9,6 +9,12 @@ import java.util.Arrays;
 import java.util.EmptyStackException;
 import java.util.List;
 
+/**
+ * Abstract Operator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public abstract class Operator implements AbstractOperator {
 
     private static final Integer TWO = 2;

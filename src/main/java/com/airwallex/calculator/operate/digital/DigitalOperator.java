@@ -9,6 +9,10 @@ import java.math.BigDecimal;
 import java.util.Arrays;
 import java.util.List;
 
+/**
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public class DigitalOperator implements AbstractOperator {
 
     private BigDecimal digits;
