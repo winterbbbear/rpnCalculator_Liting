@@ -7,6 +7,7 @@ import com.airwallex.calculator.operate.AbstractOperator;
 
 import java.math.BigDecimal;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 /**
@@ -34,7 +35,7 @@ public class DigitalOperator implements AbstractOperator {
     }
 
     private Operation getOperationRecordFromInputDigits(BigDecimal digit) {
-        List<BigDecimal> params = Arrays.asList(digit);
+        List<BigDecimal> params = Collections.singletonList(digit);
         return new Operation(params, null);
     }
 }

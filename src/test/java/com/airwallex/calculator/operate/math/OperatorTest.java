@@ -1,62 +1,39 @@
 package com.airwallex.calculator.operate.math;
 
 import com.airwallex.calculator.api.Calculate;
+import com.airwallex.calculator.operate.digital.DigitalOperator;
 import com.airwallex.calculator.operate.record.Operation;
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.mockito.InjectMocks;
+import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.math.BigDecimal;
 
-import static org.junit.Assert.assertFalse;
-
+/**
+ * Test class of Operator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
+@RunWith(PowerMockRunner.class)
 public class OperatorTest {
 
-    private Operator operatorUnderTest;
+    private Operator operator;
 
     @Before
     public void setUp() {
-        operatorUnderTest = new Operator() {
-            @Override
-            public void performOperation(Calculate calculate) {
-
-            }
-
-            @Override
-            public String getOperatorName() {
-                return null;
-            }
-        };
+        this.operator = new AdditionOperator();
     }
 
     @Test
-    public void testGetOperationRecord() {
-        // Setup
-        // Run the test
-        final Operation result = operatorUnderTest.getOperationRecord(new BigDecimal("0.00"), new BigDecimal("0.00"));
-
-        // Verify the results
+    public void testGetOperationRecord(){
+        Operation operation = operator.getOperationRecord(new BigDecimal("2"), new BigDecimal("3"));
+        Assert.assertNotNull(operation.getParameters());
+        Assert.assertEquals(operation.getParameters().size(), 2);
     }
 
-    @Test
-    public void testIsValidOperation() {
-        // Setup
-        final Calculate calculate = null;
 
-        // Run the test
-        final boolean result = operatorUnderTest.isValidOperation(calculate);
-
-        // Verify the results
-        assertFalse(result);
-    }
-
-    @Test
-    public void testCalculate() {
-        // Setup
-        final Calculate storage = null;
-
-        // Run the test
-        operatorUnderTest.calculate(storage);
-
-        // Verify the results
-    }
 }

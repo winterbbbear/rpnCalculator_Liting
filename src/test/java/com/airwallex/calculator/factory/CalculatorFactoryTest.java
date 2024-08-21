@@ -1,4 +1,4 @@
-package com.airwallex.calculator.operate.factory;
+package com.airwallex.calculator.factory;
 
 import org.junit.Assert;
 import org.junit.Test;

@@ -32,9 +32,9 @@ public abstract class Operator implements AbstractOperator {
     }
 
     @Override
-    public void calculate(Calculate storage) {
-        if (isValidOperation(storage)) {
-            performOperation(storage);
+    public void calculate(Calculate calculate) {
+        if (isValidOperation(calculate)) {
+            performOperation(calculate);
         }
     }
 

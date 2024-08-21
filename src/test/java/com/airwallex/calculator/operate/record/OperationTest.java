@@ -1,6 +1,5 @@
 package com.airwallex.calculator.operate.record;
 
-import com.airwallex.calculator.RpnCalculator;
 import com.airwallex.calculator.operate.AbstractOperator;
 import com.airwallex.calculator.operate.math.AdditionOperator;
 import org.junit.Assert;

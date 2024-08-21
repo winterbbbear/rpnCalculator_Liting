@@ -22,4 +22,9 @@ public class OperatorErrorCode {
      * Empty Input Error Code
      */
     public static final ErrorCode EMPTY_INPUT = new ErrorCode("10003", "The input is Empty");
+
+    /**
+     * Square root Error Code
+     */
+    public static final ErrorCode SQUARE_ROOT_ERROR = new ErrorCode("10004", "Square root can not be negative");
 }

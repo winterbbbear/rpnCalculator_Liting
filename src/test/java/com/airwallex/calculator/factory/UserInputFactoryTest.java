@@ -1,5 +1,6 @@
-package com.airwallex.calculator.operate.factory;
+package com.airwallex.calculator.factory;
 
+import com.airwallex.calculator.factory.UserInputFactory;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;

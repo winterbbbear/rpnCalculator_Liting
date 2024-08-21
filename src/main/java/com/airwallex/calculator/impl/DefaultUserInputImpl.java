@@ -3,7 +3,7 @@ package com.airwallex.calculator.impl;
 import com.airwallex.calculator.api.UserInput;
 import com.airwallex.calculator.operate.AbstractOperator;
 import com.airwallex.calculator.operate.digital.DigitalOperator;
-import com.airwallex.calculator.operate.factory.OperatorFactory;
+import com.airwallex.calculator.factory.OperatorFactory;
 import org.apache.commons.lang3.StringUtils;
 
 import java.io.InputStream;
@@ -25,6 +25,11 @@ public class DefaultUserInputImpl implements UserInput {
 	 */
 	private Scanner scanner;
 
+	/**
+	 * the input cursor
+	 */
+	private int position;
+
 	public DefaultUserInputImpl(InputStream in) {
 		this.scanner = new Scanner(in);
 	}
@@ -41,6 +46,17 @@ public class DefaultUserInputImpl implements UserInput {
 			}
 		}
 		return userEntries;
+	}
+
+	@Override
+	public int increaseScannerPosition(int step){
+		position +=step;
+		return position;
+	}
+
+	@Override
+	public int getScannerPosition(){
+		return position;
 	}
 
 	public Optional<AbstractOperator> constructUserInput(String userEntered) {

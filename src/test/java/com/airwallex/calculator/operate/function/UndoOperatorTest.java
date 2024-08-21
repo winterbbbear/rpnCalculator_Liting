@@ -1,8 +1,7 @@
 package com.airwallex.calculator.operate.function;
 
-import com.airwallex.calculator.error.OperatorErrorCode;
 import com.airwallex.calculator.impl.DefaultCalculateImpl;
-import com.airwallex.calculator.operate.factory.CalculatorFactory;
+import com.airwallex.calculator.factory.CalculatorFactory;
 import com.airwallex.calculator.operate.record.Operation;
 import org.junit.Assert;
 import org.junit.Test;
@@ -13,11 +12,6 @@ import org.powermock.modules.junit4.PowerMockRunner;
 import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
-
-import static org.hamcrest.core.Is.is;
-import static org.hamcrest.core.IsEqual.equalTo;
-import static org.hamcrest.core.IsNull.notNullValue;
-import static org.junit.Assert.assertThat;
 
 /**
  * Test class of UndoOperator

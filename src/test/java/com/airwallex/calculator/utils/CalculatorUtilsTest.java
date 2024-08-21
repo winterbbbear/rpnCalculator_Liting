@@ -1,14 +1,10 @@
 package com.airwallex.calculator.utils;
 
 import com.airwallex.calculator.operate.enums.OperatorsEnum;
-import com.airwallex.calculator.operate.factory.UserInputFactory;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.powermock.modules.junit4.PowerMockRunner;
-
-import java.math.BigDecimal;
-import java.util.Stack;
 
 import static org.junit.Assert.assertEquals;
 

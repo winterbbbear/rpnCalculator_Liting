@@ -1,5 +1,6 @@
-package com.airwallex.calculator.operate.factory;
+package com.airwallex.calculator.factory;
 
+import com.airwallex.calculator.factory.OperatorFactory;
 import com.airwallex.calculator.operate.AbstractOperator;
 import com.airwallex.calculator.operate.math.*;
 import org.junit.Test;

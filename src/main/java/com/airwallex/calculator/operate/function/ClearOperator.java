@@ -29,13 +29,13 @@ public class ClearOperator implements AbstractOperator {
     public void calculate(Calculate calculate){
         List<BigDecimal> elements = new ArrayList<>();
         BigDecimal digit;
-        while(!calculate.getDigitStack().isEmpty()){
+        while (!calculate.getDigitStack().isEmpty()) {
             digit = calculate.popDigital();
             elements.add(digit);
         }
         if (CollectionUtils.isNotEmpty(elements)) {
             Optional<Operation> record = this.getOperationRecordByList(elements);
-            if(record.isPresent()) {
+            if (record.isPresent()) {
                 calculate.setOperationRecord(record.get());
             }
         }

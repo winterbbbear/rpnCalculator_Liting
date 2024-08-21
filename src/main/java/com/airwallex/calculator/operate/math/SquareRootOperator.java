@@ -1,6 +1,7 @@
 package com.airwallex.calculator.operate.math;
 
 import com.airwallex.calculator.api.Calculate;
+import com.airwallex.calculator.error.OperatorErrorCode;
 import com.airwallex.calculator.operate.record.Operation;
 import com.airwallex.calculator.operate.enums.OperatorsEnum;
 
@@ -21,18 +22,18 @@ public class SquareRootOperator extends Operator {
 
     @Override
     public void calculate(Calculate calculate) {
-        BigDecimal first = calculate.popDigital();
-        if (first.equals(first.abs())) {
-            BigDecimal result = BigDecimal.valueOf(Math.sqrt(first.doubleValue()))
+        BigDecimal firstInput = calculate.popDigital();
+        if (firstInput.equals(firstInput.abs())) {
+            BigDecimal result = BigDecimal.valueOf(Math.sqrt(firstInput.doubleValue()))
                     .setScale(DECIMAL_PLACES, RoundingMode.DOWN);
             calculate.pushDigital(result);
-            List<BigDecimal> params = Collections.singletonList(first);
+            List<BigDecimal> params = Collections.singletonList(firstInput);
             Operation record = new Operation(params, this);;
             calculate.setOperationRecord(record);
         }
         else {
-            calculate.pushDigital(first);
-            System.err.println("Square root cannot be applied to " + first.stripTrailingZeros());
+            calculate.pushDigital(firstInput);
+            System.err.println(OperatorErrorCode.SQUARE_ROOT_ERROR.getDescription());
         }
     }
 
