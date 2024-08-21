@@ -13,6 +13,12 @@ import java.math.BigDecimal;
 
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Test class of SubtractionOperator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 @RunWith(PowerMockRunner.class)
 public class SubtractionOperatorTest {
 

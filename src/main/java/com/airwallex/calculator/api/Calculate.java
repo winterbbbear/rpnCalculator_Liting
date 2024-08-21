@@ -36,6 +36,12 @@ public interface Calculate {
     BigDecimal popDigital();
 
     /**
+     * print digital stack
+     *
+     */
+    void printStack();
+
+    /**
      * set OperationRecord into the rpnCalculator operationRecord
      *
      * @param record Operation record

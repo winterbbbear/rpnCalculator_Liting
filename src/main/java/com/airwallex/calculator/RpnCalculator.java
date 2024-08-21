@@ -36,13 +36,13 @@ public class RpnCalculator {
             for (AbstractOperator operator : userInputs) {
                 try {
                     operator.calculate(this.calculate);
-                    count += 2;
+                    count +=2;
                 } catch (EmptyStackException ese) {
                     System.err.println(CalculatorUtils.printEmptyStackErrorMessage(operator.getOperatorName(), count));
                     break;
                 }
             }
-            CalculatorUtils.printStack(this.calculate.getDigitStack());
+            calculate.printStack();
         }
     }
 

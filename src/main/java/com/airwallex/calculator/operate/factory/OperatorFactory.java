@@ -12,6 +12,8 @@ import com.airwallex.calculator.operate.enums.OperatorsEnum;
 import java.util.Optional;
 
 /**
+ * OperatorFactory to construct all types of calculator
+ *
  * @author litingsheng
  * @date 2024/08/21
  */
@@ -23,8 +25,8 @@ public class OperatorFactory {
 		try {
 			OperatorsEnum operator = OperatorsEnum.checkIsValidOperator(userEntered);
 			if (operator == null) {
-				System.err.println(OperatorErrorCode.ILLEGAL_ARGUMENT.getDescription());
-				return userEntry;
+				System.err.println(OperatorErrorCode.EMPTY_INPUT.getDescription());
+ 				return userEntry;
 			}
 			switch (operator) {
 				case ADDITION:

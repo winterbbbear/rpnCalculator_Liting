@@ -10,7 +10,12 @@ import org.powermock.modules.junit4.PowerMockRunner;
 
 import java.math.BigDecimal;
 
-
+/**
+ * Test class of ClearOperator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 @RunWith(PowerMockRunner.class)
 public class ClearOperatorTest {
 

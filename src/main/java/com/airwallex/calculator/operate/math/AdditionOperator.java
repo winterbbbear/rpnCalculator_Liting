@@ -22,11 +22,11 @@ public class AdditionOperator extends Operator {
 
     @Override
     public void performOperation(Calculate calculate) {
-        BigDecimal first = calculate.popDigital();
-        BigDecimal second = calculate.popDigital();
-        BigDecimal result = second.add(first);
+        BigDecimal firstInput = calculate.popDigital();
+        BigDecimal secondInput = calculate.popDigital();
+        BigDecimal result = secondInput.add(firstInput);
         calculate.pushDigital(result);
-        Operation record = getOperationRecord(first, second);
+        Operation record = getOperationRecord(firstInput, secondInput);
         calculate.setOperationRecord(record);
     }
 }

@@ -11,6 +11,12 @@ import org.powermock.modules.junit4.PowerMockRunner;
 import java.math.BigDecimal;
 import static org.junit.Assert.assertEquals;
 
+/**
+ * Test class of SquareRootOperator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 @RunWith(PowerMockRunner.class)
 public class SquareRootOperatorTest {
 

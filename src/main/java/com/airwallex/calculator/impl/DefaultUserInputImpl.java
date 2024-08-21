@@ -20,6 +20,9 @@ public class DefaultUserInputImpl implements UserInput {
 
 	private static final String REGEX_DIGIT_PATTERN = "^-*\\d+$";
 
+	/**
+	 * the input scanner
+	 */
 	private Scanner scanner;
 
 	public DefaultUserInputImpl(InputStream in) {

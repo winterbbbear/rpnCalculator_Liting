@@ -14,6 +14,17 @@ import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsEqual.equalTo;
+import static org.hamcrest.core.IsNull.notNullValue;
+import static org.junit.Assert.assertThat;
+
+/**
+ * Test class of UndoOperator
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 @RunWith(PowerMockRunner.class)
 public class UndoOperatorTest {
 
@@ -32,4 +43,5 @@ public class UndoOperatorTest {
         Assert.assertNotNull(calculator);
         Assert.assertNotNull(calculator.getDigitStack());
     }
+
 }
