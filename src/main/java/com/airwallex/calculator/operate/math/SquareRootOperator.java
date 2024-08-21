@@ -15,7 +15,7 @@ import java.util.List;
  * @author litingsheng
  * @date 2024/08/21
  */
-public class SquareRootOperator extends Operator{
+public class SquareRootOperator extends Operator {
 
     public static final int DECIMAL_PLACES = 15;
 
@@ -23,7 +23,8 @@ public class SquareRootOperator extends Operator{
     public void calculate(Calculate calculate) {
         BigDecimal first = calculate.popDigital();
         if (first.equals(first.abs())) {
-            BigDecimal result = BigDecimal.valueOf(Math.sqrt(first.doubleValue())).setScale(DECIMAL_PLACES, RoundingMode.DOWN);
+            BigDecimal result = BigDecimal.valueOf(Math.sqrt(first.doubleValue()))
+                    .setScale(DECIMAL_PLACES, RoundingMode.DOWN);
             calculate.pushDigital(result);
             List<BigDecimal> params = Collections.singletonList(first);
             Operation record = new Operation(params, this);;
@@ -42,6 +43,5 @@ public class SquareRootOperator extends Operator{
 
     @Override
     public void performOperation(Calculate calculate) {
-
     }
 }

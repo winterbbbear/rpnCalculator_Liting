@@ -8,6 +8,12 @@ import org.apache.commons.collections4.CollectionUtils;
 import java.math.BigDecimal;
 import java.util.List;
 
+/**
+ * Operation Object: store the parameters and operation of calculation history
+ *
+ * @author litingsheng
+ * @date 2024/08/21
+ */
 public class Operation {
 
     private List<BigDecimal> parameters;
