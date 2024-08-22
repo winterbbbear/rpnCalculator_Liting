@@ -18,13 +18,4 @@ public interface UserInput {
      */
     List<AbstractOperator> getUserInput();
 
-    /**
-     * increase input scanner position
-     */
-    int increaseScannerPosition(int step);
-
-    /**
-     * get position
-     */
-    int getScannerPosition();
 }

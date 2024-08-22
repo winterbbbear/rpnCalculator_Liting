@@ -30,14 +30,14 @@ public class RpnCalculator {
 
     public void execute() {
         List<AbstractOperator> userInputs = null;
-        this.userInput.increaseScannerPosition(1);
+        int count = 1;
         while (null != (userInputs = this.userInput.getUserInput())) {
             for (AbstractOperator operator: userInputs) {
                 try {
                     operator.calculate(this.calculate);
-                    userInput.increaseScannerPosition(2);
+                    count +=2;
                 } catch (EmptyStackException ese) {
-                    System.err.println(CalculatorUtils.printEmptyStackErrorMessage(operator.getOperatorName(), userInput.getScannerPosition()));
+                    System.err.println(CalculatorUtils.printEmptyStackErrorMessage(operator.getOperatorName(), count));
                     break;
                 }
             }

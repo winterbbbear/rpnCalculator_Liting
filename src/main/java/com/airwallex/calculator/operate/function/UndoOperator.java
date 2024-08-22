@@ -19,10 +19,7 @@ public class UndoOperator implements AbstractOperator {
     public void calculate(Calculate calculate) {
         Operation record = calculate.getOperationRecord();
         AbstractOperator operator = record.getOperator();
-        if (null == operator) {
-            return;
-        }
-        if (!(operator instanceof ClearOperator)) {
+        if (!((null != operator) && ((operator instanceof ClearOperator)))) {
             calculate.popDigital();
         }
         if (null != record.getOperator()) {

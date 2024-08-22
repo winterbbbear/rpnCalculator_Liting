@@ -25,10 +25,6 @@ public class DefaultUserInputImpl implements UserInput {
 	 */
 	private Scanner scanner;
 
-	/**
-	 * the input cursor
-	 */
-	private int position;
 
 	public DefaultUserInputImpl(InputStream in) {
 		this.scanner = new Scanner(in);
@@ -46,17 +42,6 @@ public class DefaultUserInputImpl implements UserInput {
 			}
 		}
 		return userEntries;
-	}
-
-	@Override
-	public int increaseScannerPosition(int step){
-		position +=step;
-		return position;
-	}
-
-	@Override
-	public int getScannerPosition(){
-		return position;
 	}
 
 	public Optional<AbstractOperator> constructUserInput(String userEntered) {
