@@ -2,6 +2,8 @@ package com.airwallex.calculator.operate.enums;
 
 
 /**
+ * Enum Class of Operator
+ *
  * @author litingsheng
  * @date 2024/08/21
  */

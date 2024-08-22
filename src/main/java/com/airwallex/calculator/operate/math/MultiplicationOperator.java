@@ -21,11 +21,11 @@ public class MultiplicationOperator extends Operator{
 
     @Override
     public void performOperation(Calculate calculate) {
-        BigDecimal first = calculate.popDigital();
-        BigDecimal second = calculate.popDigital();
-        BigDecimal result = second.multiply(first);
+        BigDecimal firstInput = calculate.popDigital();
+        BigDecimal secondInput = calculate.popDigital();
+        BigDecimal result = secondInput.multiply(firstInput);
         calculate.pushDigital(result);
-        Operation record = this.getOperationRecord(first, second);
+        Operation record = this.getOperationRecord(firstInput, secondInput);
         calculate.setOperationRecord(record);
     }
 }

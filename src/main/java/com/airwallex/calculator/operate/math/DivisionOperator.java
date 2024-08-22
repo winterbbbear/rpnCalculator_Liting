@@ -31,10 +31,10 @@ public class DivisionOperator extends Operator {
             System.err.println(OperatorErrorCode.ZERO_DIVISOR.getDescription());
             return;
         }
-        BigDecimal second = calculate.popDigital();
-        BigDecimal total = second.divide(first, DECIMAL_PLACES, RoundingMode.DOWN);
+        BigDecimal secondInput = calculate.popDigital();
+        BigDecimal total = secondInput.divide(first, DECIMAL_PLACES, RoundingMode.DOWN);
         calculate.pushDigital(total);
-        Operation record = this.getOperationRecord(first, second);
+        Operation record = this.getOperationRecord(first, secondInput);
         calculate.setOperationRecord(record);
     }
 }

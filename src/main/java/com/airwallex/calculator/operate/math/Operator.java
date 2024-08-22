@@ -19,8 +19,8 @@ public abstract class Operator implements AbstractOperator {
 
     private static final Integer TWO = 2;
 
-    protected Operation getOperationRecord(BigDecimal first, BigDecimal second) {
-        List<BigDecimal> params = Arrays.asList(second, first);
+    protected Operation getOperationRecord(BigDecimal firstInput, BigDecimal secondInput) {
+        List<BigDecimal> params = Arrays.asList(secondInput, firstInput);
         return new Operation(params, this);
     }
 

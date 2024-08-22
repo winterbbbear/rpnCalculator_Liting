@@ -1,6 +1,5 @@
 package com.airwallex.calculator.factory;
 
-import com.airwallex.calculator.factory.OperatorFactory;
 import com.airwallex.calculator.operate.AbstractOperator;
 import com.airwallex.calculator.operate.math.*;
 import org.junit.Test;
@@ -24,6 +23,11 @@ public class OperatorFactoryTest {
     @InjectMocks
     private OperatorFactory operatorFactory;
 
+    /**
+     * Given an addition string
+     * When the getOperator method called
+     * Then the addition operator should return
+     */
     @Test
     public void testAdditionOperatorFromFactory() {
         String userEntered = "+";
@@ -33,6 +37,11 @@ public class OperatorFactoryTest {
         assertTrue(userEntry.get() instanceof AdditionOperator);
     }
 
+    /**
+     * Given a subtraction string
+     * When the getOperator method called
+     * Then the subtraction operator should return
+     */
     @Test
     public void testSubtractionOperatorFromFactory() {
         String userEntered = "-";
@@ -42,6 +51,11 @@ public class OperatorFactoryTest {
         assertTrue(userEntry.get() instanceof SubtractionOperator);
     }
 
+    /**
+     * Given a multiplication string
+     * When the getOperator method called
+     * Then the multiplication operator should return
+     */
     @Test
     public void testMultiplicationOperatorFromFactory() {
         String userEntered = "*";
@@ -51,6 +65,11 @@ public class OperatorFactoryTest {
         assertTrue(userEntry.get() instanceof MultiplicationOperator);
     }
 
+    /**
+     * Given a sqrt string
+     * When the getOperator method called
+     * Then the SquareRoot operator should return
+     */
     @Test
     public void testSquareRootOperatorFromFactory() {
         String userEntered = "sqrt";
@@ -60,6 +79,11 @@ public class OperatorFactoryTest {
         assertTrue(userEntry.get() instanceof SquareRootOperator);
     }
 
+    /**
+     * Given a Division string
+     * When the getOperator method called
+     * Then the Division operator should return
+     */
     @Test
     public void testDivisionOperatorFromFactory() {
         String userEntered = "/";

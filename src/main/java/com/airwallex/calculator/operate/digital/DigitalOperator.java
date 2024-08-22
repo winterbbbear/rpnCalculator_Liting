@@ -10,6 +10,8 @@ import java.util.Collections;
 import java.util.List;
 
 /**
+ * Class of digital operator
+ *
  * @author litingsheng
  * @date 2024/08/21
  */

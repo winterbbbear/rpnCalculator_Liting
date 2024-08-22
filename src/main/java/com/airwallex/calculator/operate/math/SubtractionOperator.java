@@ -21,11 +21,11 @@ public class SubtractionOperator extends Operator {
 
     @Override
     public void performOperation(Calculate calculate) {
-        BigDecimal first = calculate.popDigital();
-        BigDecimal second = calculate.popDigital();
-        BigDecimal result = second.subtract(first);
+        BigDecimal firstInput = calculate.popDigital();
+        BigDecimal secondInput = calculate.popDigital();
+        BigDecimal result = secondInput.subtract(firstInput);
         calculate.pushDigital(result);
-        Operation record = this.getOperationRecord(first, second);
+        Operation record = this.getOperationRecord(firstInput, secondInput);
         calculate.setOperationRecord(record);
     }
 }
