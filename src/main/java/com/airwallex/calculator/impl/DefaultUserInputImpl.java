@@ -25,6 +25,11 @@ public class DefaultUserInputImpl implements UserInput {
 	 */
 	private Scanner scanner;
 
+	/**
+	 * the position of userInput
+	 */
+	private int position;
+
 
 	public DefaultUserInputImpl(InputStream in) {
 		this.scanner = new Scanner(in);
@@ -42,6 +47,22 @@ public class DefaultUserInputImpl implements UserInput {
 			}
 		}
 		return userEntries;
+	}
+
+	@Override
+	public void increaseScannerPosition(int step) {
+		this.position += step;
+	}
+
+	@Override
+	public int getScannerPosition() {
+		return this.position;
+	}
+
+	@Override
+	public void resetScannerPosition() {
+		// according to the offline test description, the beginning position is 1
+		this.position = 1;
 	}
 
 	public Optional<AbstractOperator> constructUserInput(String userEntered) {

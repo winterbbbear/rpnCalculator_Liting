@@ -18,4 +18,19 @@ public interface UserInput {
      */
     List<AbstractOperator> getUserInput();
 
+    /**
+     * increase input scanner position by step
+     */
+    void increaseScannerPosition(int step);
+
+    /**
+     * get position
+     */
+    int getScannerPosition();
+
+    /**
+     * reset position to the beginning
+     */
+    void resetScannerPosition();
+
 }

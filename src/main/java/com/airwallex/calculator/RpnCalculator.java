@@ -5,6 +5,7 @@ import com.airwallex.calculator.api.UserInput;
 import com.airwallex.calculator.factory.CalculatorFactory;
 import com.airwallex.calculator.factory.UserInputFactory;
 import com.airwallex.calculator.operate.AbstractOperator;
+import com.airwallex.calculator.operate.function.ClearOperator;
 import com.airwallex.calculator.utils.CalculatorUtils;
 
 import java.util.EmptyStackException;
@@ -30,14 +31,18 @@ public class RpnCalculator {
 
     public void execute() {
         List<AbstractOperator> userInputs = null;
-        int count = 1;
+        userInput.resetScannerPosition();
         while (null != (userInputs = this.userInput.getUserInput())) {
             for (AbstractOperator operator: userInputs) {
                 try {
                     operator.calculate(this.calculate);
-                    count +=2;
+                    userInput.increaseScannerPosition(2);
+                    if (operator instanceof ClearOperator) {
+                        //clear operator should reset the scanner position
+                        userInput.resetScannerPosition();
+                    }
                 } catch (EmptyStackException ese) {
-                    System.err.println(CalculatorUtils.printEmptyStackErrorMessage(operator.getOperatorName(), count));
+                    System.err.println(CalculatorUtils.printEmptyStackErrorMessage(operator.getOperatorName(), userInput.getScannerPosition()));
                     break;
                 }
             }

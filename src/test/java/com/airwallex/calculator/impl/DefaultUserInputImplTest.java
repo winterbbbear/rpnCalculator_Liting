@@ -32,9 +32,22 @@ public class DefaultUserInputImplTest {
 
     @Test
     public void testConstructUserInputWithOperatorInput() {
-        final Optional<AbstractOperator> result = defaultCalculateImpl.constructUserInput("+");
+        Optional<AbstractOperator> result = defaultCalculateImpl.constructUserInput("+");
 
         AbstractOperator abstractOperator = result.get();
         Assert.assertNotNull(abstractOperator);
+    }
+
+    @Test
+    public void testIncreaseScannerPositionWithReset(){
+        defaultCalculateImpl.resetScannerPosition();
+        defaultCalculateImpl.increaseScannerPosition(2);
+        Assert.assertEquals(defaultCalculateImpl.getScannerPosition(),3);
+    }
+
+    @Test
+    public void testResetScannerPosition(){
+        defaultCalculateImpl.resetScannerPosition();
+        Assert.assertEquals(defaultCalculateImpl.getScannerPosition(),1);
     }
 }
