@@ -25,7 +25,7 @@ public class OperatorFactory {
 		try {
 			OperatorsEnum operator = OperatorsEnum.checkIsValidOperator(userEntered);
 			if (operator == null) {
-				System.err.println(OperatorErrorCode.EMPTY_INPUT.getDescription());
+				System.err.println(OperatorErrorCode.ILLEGAL_ARGUMENT.getDescription());
  				return userEntry;
 			}
 			switch (operator) {

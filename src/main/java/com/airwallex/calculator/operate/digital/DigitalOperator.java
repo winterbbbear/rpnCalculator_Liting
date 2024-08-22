@@ -6,7 +6,6 @@ import com.airwallex.calculator.operate.AbstractOperator;
 
 
 import java.math.BigDecimal;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 

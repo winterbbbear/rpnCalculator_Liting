@@ -1,7 +1,5 @@
 package com.airwallex.calculator.operate.enums;
 
-import com.airwallex.calculator.error.OperatorErrorCode;
-
 
 /**
  * @author litingsheng

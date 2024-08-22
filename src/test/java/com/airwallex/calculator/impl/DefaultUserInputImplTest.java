@@ -33,7 +33,7 @@ public class DefaultUserInputImplTest {
     @Test
     public void testConstructUserInputWithOperatorInput() {
         Optional<AbstractOperator> result = defaultCalculateImpl.constructUserInput("+");
-
+        Assert.assertTrue(result.isPresent());
         AbstractOperator abstractOperator = result.get();
         Assert.assertNotNull(abstractOperator);
     }
