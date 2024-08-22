@@ -24,8 +24,8 @@ public class DefaultUserInputImplTest {
 
     @Test
     public void testConstructUserInputWithDigitalInput() {
-        final Optional<AbstractOperator> result = defaultCalculateImpl.constructUserInput("1");
-
+        Optional<AbstractOperator> result = defaultCalculateImpl.constructUserInput("1");
+        Assert.assertTrue(result.isPresent());
         AbstractOperator abstractOperator = result.get();
         Assert.assertNotNull(abstractOperator);
     }
